@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div>{{ count }}回クリック</div>
+    <div>{{ count }}カウント</div>
+    <div>{{ clickCount }}クリック数</div>
     <button v-on:click="increment">カウントを増やす</button>
+    <button v-on:click="decrement">カウントを減らす</button>
     <div class="counter">Count</div>
   </div>
 </template>
@@ -11,12 +13,18 @@ export default {
   name: "Count",
   data() {
     return {
-      count: 0
+      count: 0,
+      clickCount: 0
     };
   },
   methods: {
     increment: function() {
       this.count += 1;
+      this.clickCount += 1;
+    },
+    decrement: function() {
+      this.count -= 1;
+      this.clickCount += 1;
     }
   }
 };
