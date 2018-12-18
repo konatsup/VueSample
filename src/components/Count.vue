@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-red">{{ count }}カウント</div>
+    <div :class="[isRed ? 'text-red': 'text-blue']">{{ count }}カウント</div>
     <div class="text-blue">{{ clickCount }}クリック数</div>
     <button v-on:click="increment">カウントを増やす</button>
     <button v-on:click="decrement">カウントを減らす</button>
@@ -14,7 +14,8 @@ export default {
   data() {
     return {
       count: 0,
-      clickCount: 0
+      clickCount: 0,
+      isRed: true
     };
   },
   methods: {
