@@ -7,17 +7,22 @@ module.exports = {
   },
   env: {
     browser: true,
+    node: true,
+    es6: true
   },
   // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
   // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
   extends: ['plugin:vue/essential'],
   // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
+  plugins: ['vue'],
   // add your custom rules here
   rules: {
     // allow debugger during development
+    'no-var': 'error',
+    'no-console': 'error',
+    'no-new-object': 'error',
+    'no-array-constructor': 'error',
+    quotes: ['warn', 'single'],
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
 }
