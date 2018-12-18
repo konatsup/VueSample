@@ -1,18 +1,23 @@
 <template>
-<div>
-  <div>Hello{{ user.name }}</div>
-  <div>Age:{{ user.age }}</div>
-  <div>Job:{{ user.job }}</div>
-  <div>{{todo.name}}</div>
-  <input type='text' :value='todo.name' >
-  <div>{{todo.name.length >=20 ? '文字数を減らしてください': ''}}</div>
-</div>
+  <div>
+    <counter/>
+    <div>Hello{{ user.name }}</div>
+    <div>Age:{{ user.age }}</div>
+    <div>Job:{{ user.job }}</div>
+    <div>{{todo.name}}</div>
+    <input type="text" :value="todo.name">
+    <div>{{todo.name.length >=20 ? '文字数を減らしてください': ''}}</div>
+  </div>
 </template>
 
 <script>
+import Count from './Count';
 export default {
   name: 'HelloWorld',
-  data () {
+  components: {
+    counter: Count
+  },
+  data() {
     return {
       user: {
         name: 'デーモン閣下',
@@ -22,9 +27,9 @@ export default {
       todo: {
         name: 'あいうえおかきくけこさしすせそたちつてとな'
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
