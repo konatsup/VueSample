@@ -1,7 +1,8 @@
 <template>
 <div>
-  <div>Hello {{ message }}</div>
-  <div>Hello {{ testData }}</div>
+  <div>Hello{{ user.name }}</div>
+  <div>Age:{{ user.age }}</div>
+  <div>Job:{{ user.job }}</div>
 </div>
 </template>
 
@@ -10,8 +11,11 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      message: 'Vue.js!!',
-      testData: 'data'
+      user: {
+        name: 'デーモン閣下',
+        age: 24,
+        job: 'Student'
+      }
     }
   }
 }
