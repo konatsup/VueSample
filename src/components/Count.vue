@@ -18,11 +18,11 @@ export default {
     };
   },
   methods: {
-    increment: function() {
+    increment() {
       this.count += 1;
       this.clickCount += 1;
     },
-    decrement: function() {
+    decrement() {
       this.count -= 1;
       this.clickCount += 1;
     }
