@@ -4,6 +4,7 @@
   <div>Age:{{ user.age }}</div>
   <div>Job:{{ user.job }}</div>
   <div>{{todo.name}}</div>
+  <input type='text' :value='todo.name' >
   <div>{{todo.name.length >=20 ? '文字数を減らしてください': ''}}</div>
 </div>
 </template>
