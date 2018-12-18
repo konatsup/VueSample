@@ -3,6 +3,8 @@
   <div>Hello{{ user.name }}</div>
   <div>Age:{{ user.age }}</div>
   <div>Job:{{ user.job }}</div>
+  <div>{{todo.name}}</div>
+  <div>{{todo.name.length >=20 ? '文字数を減らしてください': ''}}</div>
 </div>
 </template>
 
@@ -13,8 +15,11 @@ export default {
     return {
       user: {
         name: 'デーモン閣下',
-        age: 24,
+        age: 56,
         job: 'Student'
+      },
+      todo: {
+        name: 'あいうえおかきくけこさしすせそたちつてとな'
       }
     }
   }
