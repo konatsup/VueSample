@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>{{ count }}カウント</div>
-    <div>{{ clickCount }}クリック数</div>
+    <div class="text-red">{{ count }}カウント</div>
+    <div class="text-blue">{{ clickCount }}クリック数</div>
     <button v-on:click="increment">カウントを増やす</button>
     <button v-on:click="decrement">カウントを減らす</button>
     <div class="counter">Count</div>
@@ -34,5 +34,11 @@ export default {
 .counter {
   font-size: 26px;
   background-color: #dfd;
+}
+.text-red {
+  color: #f22;
+}
+.text-blue {
+  color: #22f;
 }
 </style>
